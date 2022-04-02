@@ -1,7 +1,6 @@
 import React from 'react';
 
 const TabData = ({ data }) => {
-  console.log('this', data);
   return (
     <div>
       {data.map((item) => {

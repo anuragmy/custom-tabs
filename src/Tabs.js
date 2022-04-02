@@ -1,19 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import TabHeader from './TabHeader';
 import TabData from './TabData';
 
-const Tabs = ({ children, data, getActiveIndex }) => {
-  const [active, setactive] = useState(1);
-
-  console.log(children);
-
+const Tabs = ({ children, getActiveIndex }) => {
   useEffect(() => {
     children.forEach((item) => {
       if (item.type !== 'tab') {
         throw Error('Invalid child type');
       }
     });
-  }, [active]);
+  }, []);
 
   const handleActive = (index) => {
     getActiveIndex(index);

@@ -19,10 +19,10 @@ export default function App() {
   return (
     <div>
       <Tabs getActiveIndex={getActiveIndex}>
-        <tab label="home" active={activename === 'home' ? true : false}>
+        <tab label="home" active={activename === 'home'}>
           <Home />
         </tab>
-        <tab label="about" active={activename === 'about' ? true : false}>
+        <tab label="about" active={activename === 'about'}>
           <About />
         </tab>
       </Tabs>
